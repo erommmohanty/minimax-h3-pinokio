@@ -176,7 +176,7 @@ module.exports = {
     },
     // ~85 GB total. Shared encoder + VAEs first, then each transformer.
     {
-      when: "{{platform === 'win32' && gpu === 'nvidia'}}",
+      when: "{{gpu === 'nvidia'}}",
       method: "script.start",
       params: {
         uri: "download/text_encoder_nvfp4.js"

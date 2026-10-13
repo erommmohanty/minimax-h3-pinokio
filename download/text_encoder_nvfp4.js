@@ -3,10 +3,11 @@
 module.exports = {
   run: [
     {
-      method: "fs.download",
+      method: "hf.download",
       params: {
-        uri: "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors?download=true",
-        dir: "../app/models/text_encoders"
+        path: "../app/models",
+        _: ["Comfy-Org/MiniMax-H3", "text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors"],
+        "local-dir": "."
       }
     }
   ]

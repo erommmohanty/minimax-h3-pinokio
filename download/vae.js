@@ -6,17 +6,19 @@
 module.exports = {
   run: [
     {
-      method: "fs.download",
+      method: "hf.download",
       params: {
-        uri: "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_video_vae_fp16.safetensors?download=true",
-        dir: "../app/models/vae"
+        path: "../app/models",
+        _: ["Comfy-Org/MiniMax-H3", "vae/minimax_h3_video_vae_fp16.safetensors"],
+        "local-dir": "."
       }
     },
     {
-      method: "fs.download",
+      method: "hf.download",
       params: {
-        uri: "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/vae/minimax_h3_audio_vae_fp32.safetensors?download=true",
-        dir: "../app/models/vae"
+        path: "../app/models",
+        _: ["Comfy-Org/MiniMax-H3", "vae/minimax_h3_audio_vae_fp32.safetensors"],
+        "local-dir": "."
       }
     }
   ]

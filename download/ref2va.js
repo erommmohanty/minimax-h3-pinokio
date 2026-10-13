@@ -6,10 +6,11 @@
 module.exports = {
   run: [
     {
-      method: "fs.download",
+      method: "hf.download",
       params: {
-        uri: "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main/diffusion_models/minimax_h3_ref2va_pruned_int8_convrot.safetensors?download=true",
-        dir: "../app/models/diffusion_models"
+        path: "../app/models",
+        _: ["Comfy-Org/MiniMax-H3", "diffusion_models/minimax_h3_ref2va_pruned_int8_convrot.safetensors"],
+        "local-dir": "."
       }
     }
   ]
